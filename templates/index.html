@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Laptop Price Predictor</title>
+    
+</head>
+<body>
+    <h1>Laptop Price Predictor</h1>
+    <form method="POST" action="/predict">
+        <label for="company">Company:</label>
+        <input type="text" name="company" required><br><br>
+
+        <label for="typename">Type Name:</label>
+        <input type="text" name="typename" required><br><br>
+
+        <label for="inches">Inches:</label>
+        <input type="number" name="inches" step="0.01" required><br><br>
+    
+        <label for="ram">RAM (GB):</label>
+        <input type="number" name="ram" required><br><br>
+
+        <label for="weight">Weight (kg):</label>
+        <input type="number" name="weight" step="0.01" required><br><br>
+
+        <label for="ssd">SSD (GB):</label>
+        <input type="number" name="ssd" required><br><br>
+
+        <label for="hdd">HDD (GB):</label>
+        <input type="number" name="hdd" required><br><br>
+
+        <label for="touchscreen">Touchscreen:</label>
+        <select name="touchscreen" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label for="ips">IPS Display:</label>
+        <select name="ips" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label for="cpu_brand">CPU Brand:</label>
+        <input type="text" name="cpu_brand" required><br><br>
+            
+       
+
+        <label for="gpu_brand">GPU Brand:</label>
+        <input type="text" name="gpu_brand" required><br><br>
+        
+        <label for="os">Operating System:</label>
+        <input type="text" name="os" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+    <p>{{ prediction }}</p>
+</body>
+</html>
